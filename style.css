@@ -4,7 +4,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: url('mf1.jpg') no-repeat center center/cover;
+    background: url('mf5.jpg') no-repeat center center/cover;
     margin: 0;
     transition: background 0.5s ease-in-out;
 }
