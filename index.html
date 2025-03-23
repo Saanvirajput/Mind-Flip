@@ -3,45 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mind Flip</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Mind-Flip</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script> 
 </head>
 <body>
     <div class="game-container">
-        <h1>Mind Flip</h1>
+        <h1>Mind-Flip</h1>
         <div class="controls">
-            <label for="difficulty">Difficulty:</label>
+            <div id="timer">Time: 0s</div> 
+            <div id="moves">Moves: 0</div> 
+            <div id="stars">Stars: ⭐⭐⭐</div>
+            <button id="pause">Pause</button>
+            <button id="restart">Restart Game</button>
             <select id="difficulty">
                 <option value="easy">Easy</option>
                 <option value="medium">Medium</option>
                 <option value="hard">Hard</option>
             </select>
-
-            <label for="card-set">Card Set:</label>
+            <select id="theme-select">
+                <option value="light">Light Mode</option>
+                <option value="dark">Dark Mode</option>
+                <option value="neon">Neon Mode</option>
+            </select>
             <select id="card-set">
-                <option value="classic">Classic</option>
+                <option value="classic">Classic (Fruits & Food)</option>
                 <option value="animals">Animals</option>
                 <option value="space">Space</option>
                 <option value="superheroes">Superheroes</option>
+                <option value="custom">Custom Upload</option>
             </select>
-
-            <label for="theme-select">Theme:</label>
-            <select id="theme-select">
-                <option value="light">Light</option>
-                <option value="dark">Dark</option>
-                <option value="neon">Neon</option>
-            </select>
-            
-            <button id="restart">Restart Game</button>
+            <button id="music-toggle">Music On/Off</button>
         </div>
-
-        <div class="stats">
-            <span id="timer">Time: 0s</span>
-            <span id="moves">Moves: 0</span>
+        <div class="game-board" id="game-board"></div>
+        <div class="leaderboard">
+            <h2>Leaderboard</h2>
+            <ol id="leaderboard-list"></ol>
         </div>
-
-        <div id="game-board" class="game-board"></div>
+        <audio id="bg-music" src="background-music.mp3" loop></audio>
     </div>
-
-    <script src="script.js"></script>
+</body>
 </html>
