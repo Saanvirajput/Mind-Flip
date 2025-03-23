@@ -3,9 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Memory Card Game</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
-</body>
+    <div class="game-container">
+        <h1>Memory Card Game</h1>
+        <div class="controls">
+            <label for="difficulty">Difficulty:</label>
+            <select id="difficulty">
+                <option value="easy">Easy</option>
+                <option value="medium">Medium</option>
+                <option value="hard">Hard</option>
+            </select>
+
+            <label for="card-set">Card Set:</label>
+            <select id="card-set">
+                <option value="classic">Classic</option>
+                <option value="animals">Animals</option>
+                <option value="space">Space</option>
+                <option value="superheroes">Superheroes</option>
+            </select>
+
+            <label for="theme-select">Theme:</label>
+            <select id="theme-select">
+                <option value="light">Light</option>
+                <option value="dark">Dark</option>
+                <option value="neon">Neon</option>
+            </select>
+            
+            <button id="restart">Restart Game</button>
+        </div>
+
+        <div class="stats">
+            <span id="timer">Time: 0s</span>
+            <span id="moves">Moves: 0</span>
+        </div>
+
+        <div id="game-board" class="game-board"></div>
+    </div>
+
+    <script src="script.js"></script>
 </html>
